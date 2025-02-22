@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@onready var animated_player = $AnimatedSprite2D
 @export var SPEED = 150
 const DASH = 300
 #var timer = Timer.new()
@@ -24,10 +24,15 @@ func read_input():
 		tween.tween_property(self, "dash_vel", 0, 0.3).set_ease(Tween.EASE_OUT)
 		can_dash = false
 		dash_cooldown()
-		
+	
+	if Input.is_action_pressed("Down"):
+		animated_player.play("front_walk")
+	else:
+		animated_player.stop()
 	
 	var input_dir = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_dir * (SPEED + dash_vel)
+
 	
 func _physics_process(delta):
 	read_input()
