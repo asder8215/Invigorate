@@ -9,13 +9,17 @@
 [node name="AllScenes" type="Node2D"]
 
 [node name="Start" parent="." instance=ExtResource("1_f716v")]
-visible = false
 
 [node name="RoomOne" parent="." instance=ExtResource("2_ncft0")]
-position = Vector2(640, 390)
+position = Vector2(1568, 388)
 
 [node name="RoomTwo" parent="." instance=ExtResource("3_hy1qp")]
+position = Vector2(1568, 918)
 
 [node name="RejuvRoom" parent="." instance=ExtResource("4_ign0q")]
+position = Vector2(1569, -142)
 
 [node name="RoomThree" parent="." instance=ExtResource("5_n2n1u")]
+position = Vector2(2496, 921)
+
+[node name="Camera2D" type="Camera2D" parent="."]
