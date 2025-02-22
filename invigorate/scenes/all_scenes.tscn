@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://c8a2xxlx8uj0o"]
+[gd_scene load_steps=6 format=3 uid="uid://c8a2xxlx8uj0o"]
+
+[ext_resource type="PackedScene" uid="uid://cds6mc8ha7mf4" path="res://scenes/start_room.tscn" id="1_f716v"]
+[ext_resource type="PackedScene" uid="uid://b5pb78y2xdjxu" path="res://scenes/room_one.tscn" id="2_ncft0"]
+[ext_resource type="PackedScene" uid="uid://bmgs34t84uqg6" path="res://scenes/room_two.tscn" id="3_hy1qp"]
+[ext_resource type="PackedScene" uid="uid://ia7kfmmjcuys" path="res://scenes/rejuv_room.tscn" id="4_ign0q"]
+[ext_resource type="PackedScene" uid="uid://eseq37kcyk4i" path="res://scenes/boss room.tscn" id="5_n2n1u"]
 
 [node name="AllScenes" type="Node2D"]
+
+[node name="Start" parent="." instance=ExtResource("1_f716v")]
+visible = false
+
+[node name="RoomOne" parent="." instance=ExtResource("2_ncft0")]
+position = Vector2(640, 390)
+
+[node name="RoomTwo" parent="." instance=ExtResource("3_hy1qp")]
+
+[node name="RejuvRoom" parent="." instance=ExtResource("4_ign0q")]
+
+[node name="RoomThree" parent="." instance=ExtResource("5_n2n1u")]

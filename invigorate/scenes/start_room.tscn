@@ -1687,7 +1687,7 @@ texture = ExtResource("3_cniik")
 [sub_resource type="TileSet" id="TileSet_cnqg4"]
 sources/0 = SubResource("TileSetAtlasSource_vj6fo")
 
-[node name="Node2D" type="Node2D"]
+[node name="Start Room" type="Node2D"]
 position = Vector2(640, 390)
 
 [node name="Dark Grass" type="TileMapLayer" parent="."]
