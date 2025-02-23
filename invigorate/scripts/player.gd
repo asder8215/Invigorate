@@ -27,8 +27,15 @@ func read_input():
 	
 	if Input.is_action_pressed("Down"):
 		animated_player.play("front_walk")
+	elif Input.is_action_pressed("Up"):
+		animated_player.play("back_walk")
+	elif Input.is_action_pressed("Left"):
+		animated_player.play("left_walk")
+	elif Input.is_action_pressed("Right"):
+		animated_player.play("right_walk")
 	else:
 		animated_player.stop()
+
 	
 	var input_dir = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_dir * (SPEED + dash_vel)
